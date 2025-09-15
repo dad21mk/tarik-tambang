@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarik Tambang 17 Agustus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="wrap">
+    <header>
+      <h1>🎮 Tarik Tambang 17 Agustus</h1>
+      <p>Tekan <b>A</b> (Kiri) & <b>L</b> (Kanan) – <b>R</b> untuk reset</p>
+    </header>
+
+    <main class="gameArea">
+      <div class="board">
+        <canvas id="c" width="900" height="520"></canvas>
+
+        <div class="hud top-left">
+          <button class="btn" id="resetBtn">🔄 Reset</button>
+        </div>
+        <div class="hud top-right">
+          <button class="btn" id="leftBtn">⬅️ Kiri</button>
+          <button class="btn" id="rightBtn">Kanan ➡️</button>
+        </div>
+
+        <div class="progressWrap"><div id="progressBar"></div></div>
+
+        <div id="startScreen" class="overlay">
+          <h2>Siap Tarik Tambang?</h2>
+          <button id="startBtn" class="btn big">Mulai!</button>
+          <p class="tip">Atau tekan <b>Spasi</b></p>
+        </div>
+      </div>
+
+      <!-- Leaderboard -->
+      <aside class="leaderboard">
+        <h3>🏆 Leaderboard</h3>
+        <table class="leaderTable">
+          <thead>
+            <tr><th>No</th><th>Tim</th><th>Waktu</th><th>Tanggal</th></tr>
+          </thead>
+          <tbody id="leaderBody"></tbody>
+        </table>
+        <button id="clearBoard" class="btn small clearBtn">Hapus Semua</button>
+      </aside>
+    </main>
+
+    <footer>
+      <small></small>
+    </footer>
+  </div>
+
+  <audio id="whistle" src="assets/whistle.mp3" preload="auto"></audio>
+  <audio id="cheer"   src="assets/cheer.mp3" preload="auto"></audio>
+  <!-- Audio lama -->
+<audio id="whistle" src="assets/whistle.mp3" preload="auto"></audio>
+<audio id="cheer" src="assets/cheer.mp3" preload="auto"></audio>
+
+<!-- ✅ Audio supporter baru -->
+<audio id="crowdSound" src="assets/crowd.mp3" preload="auto" loop></audio>
+
+
+  <script src="game.js"></script>
+</body>
+</html>
